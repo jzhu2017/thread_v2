@@ -1,0 +1,250 @@
+{% extends "components/base.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}THREAD | About{% endblock %}
+{% block body %}
+<!-- <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"> -->
+      <!-- embed video using link, mp4 format-->
+      <!-- <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+      </video>
+      <div class="container h-100">
+        <div class="d-flex text-left h-100">
+          <div class="my-auto w-100 text-white" id="videotext">
+            <div id="toptitletext">
+              <div><h1>About Thread</h1></div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet mauris et magna consectetur convallis.</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-outline-light">Our Mission</button>
+              </div>
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-outline-light">Our E-Board</button>
+              </div>
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-outline-light">Our Subteams</button>
+              </div>
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-outline-light">Get Involved</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <div class="container-fluid mt-4" id="about">
+      <h1 class="text-center text-uppercase" id="title">Who We Are</h1>
+
+      <div class="row">
+
+        <div class="col-lg-12 col-sm-10 text-left mb-2">
+          <p id="whoweare"> <span id="thread">Thread Magazine</span> is an independent student publication and the only fashion, lifestyle, and
+            art magazine at Cornell. Thread represents a conglomeration of student-made fashion, art, photography,
+            styling, and design. We publish an issue each semester and aim to showcase the interdisciplinary talents of
+            individuals within the Cornell community through compelling visual and written storytelling.
+        </div>
+
+        <div class="col-lg-12 col-sm-10 text-center mb-2">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12 col-sm-10 text-center mb-2">
+                <h5 id="title-text" class="text-uppercase text-left mb-4">Our Process</h5>
+                <img class="img-responsive" src={% static 'imgs/thread_process.svg' %} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-md-10 text-left" id="our-values">
+
+          <div class="container-fluid">
+            <h5 id="title-text" class="text-uppercase">Our Values</h5>
+            <div class="row">
+              <div class="col-lg-4 col-md-2 text-center" id="left-box">
+                <img id="values" class="img-responsive" src={% static 'imgs/thread_values2.png' %}/>
+              </div>
+              <div class="col-lg-8 col-md-8 text-left" id="right-box">
+                <p id="passage">
+
+                  <span id="passage-title">Fashion is interdisciplinary</span>
+                  Thread is a fashion magazine that acts like a design organization, thought platform, and artistic collective. We look to
+                  explore and showcase the breadth of creativity at Cornell.
+                  <br/><br/>
+                  <span id="passage-title">Thread doesn't have one look</span>
+                  Fashion encompasses many faces and we strive to do the same. We go beyond the boundaries of 'trendy' and 'stylish',
+                  using apparel as a medium of expression to mark cultural conversations.
+                  <br/><br/>
+                  <span id="passage-title">Thread redefines beauty</span>
+                  We see hair and makeup as physical manifestations of human feeling, emotion and experience. Beauty is dynamic
+                  and multi-faceted.
+                  <br/><br/>
+                  <span id="passage-title">Design with purpose</span>
+                  We translate visual inspirations into paper medium, evoking and enhancing thematic elements in every decision,
+                  making this magazine not only a publication but a work of art.
+
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="container-fluid mx-auto" id="teams">
+      <h1 class="text-uppercase text-center" id="title">Teams</h1>
+      <!-- team row 1 -->
+      <div class="mx-auto mb-5 row text-center">
+        <div class="col-md-1 mx-auto"></div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-1 mx-auto"></div>
+      </div>
+      <!-- team row 1 -->
+      <div class="mx-auto mb-5 row text-center">
+        <div class="col-md-1 mx-auto"></div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-1 mx-auto"></div>
+      </div>
+      <!-- team row 1 -->
+      <div class="mx-auto mb-5 row text-center">
+        <div class="col-md-1 mx-auto"></div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+
+        </div>
+        <div class="col-md-3 mx-auto">
+            <span class="border border-white">  <img class="img-responsive" src="http://placehold.jp/280x280.png" alt=""> </span>
+        </div>
+        <div class="col-md-1 mx-auto"></div>
+      </div>
+    </div>
+
+  <div class="container-fluid" id="eboard">
+      <h1 class="text-uppercase text-center mb-4" id="title">Executive Board</h1>
+
+      <!-- eboard row 1 -->
+      <div class="row mt-4 mb-4">
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/01omar_abdul-rahim.jpg' %} alt="">
+          <h3 id="membername">Omar Abdul-Rahim</h3>
+          <h4 id="titlename">President</h4>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/02nadine_fuller.jpg' %} alt="">
+          <h3 id="membername">Nadine Fuller</h3>
+          <h4 id="titlename">Vice President</h4>
+          </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/03joyce_jin.jpg' %} alt="">
+          <h3 id="membername">Joyce Jin</h3>
+          <h4 id="titlename">Technical Director</h4>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/04cornellius_tulloch.jpg' %} alt="">
+          <h3 id="membername">Cornellius Tulloch</h3>
+          <h4 id="titlename">Creative Director</h4>
+
+        </div>
+      </div>
+
+      <!-- eboard row 2 -->
+
+      <div class="row mb-4">
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/05michael_choe.jpg' %} alt="">
+          <h3 id="membername">Michael Choe</h3>
+          <h4 id="titlename">Art Director</h4>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/06andie_orduna.jpg' %} alt="">
+          <h3 id="membername">Andie Orduna</h3>
+          <h4 id="titlename">Editor in Chief</h4>
+        </div>
+
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/07jacob_swaim.JPG' %} alt="">
+          <h3 id="membername">Jacob Swaim</h3>
+          <h4 id="titlename">Assistant Editor in Chief</h4>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/08savanna_lim.jpg' %} alt="">
+          <h3 id="membername">Savanna Lim</h3>
+          <h4 id="titlename">Photography Director</h4>
+
+        </div>
+
+      </div>
+
+      <!-- eboard row 3 -->
+      <div class="row  mb-4">
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/09charlene_pires.jpg' %} alt="">
+          <h3 id="membername">Charlene Pires</h3>
+          <h4 id="titlename">Styling Director</h4>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/10christine_yang.jpg' %} alt="">
+          <h3 id="membername">Christine Yang</h3>
+          <h4 id="titlename">Marketing Director</h4>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/11jackie_han.jpg' %} alt="">
+          <h3 id="membername">Jackie Han</h3>
+          <h4 id="titlename">Business Director</h4>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={% static 'imgs/fw2018_eboard/12cedric_castillo.JPG' %} alt="">
+          <h3 id="membername">Cedric Castillo</h3>
+          <h4 id="titlename">Web Director</h4>
+        </div>
+
+      </div>
+
+    </div>
+</div>
+{% endblock %}

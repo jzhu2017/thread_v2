@@ -1,0 +1,11 @@
+venv
+*.idea
+*.pyc
+*.swp
+*.map
+*.*~
+articles/migrations
+core/migrations
+secret.py
+frontend/css
+db.sqlite3

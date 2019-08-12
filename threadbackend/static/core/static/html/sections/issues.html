@@ -1,0 +1,110 @@
+{% extends "components/base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/issues.css' %}">
+{% endblock %}
+
+{% block title %}THREAD | Issues{% endblock %}
+
+
+{% block body %}
+
+<!-- Issues Carousel -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner text-center" id="issues">
+
+
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-2">
+          </div>
+        {% for issue in latest_4_issue %}
+
+          {% if issue %}
+          <div class="col-md-2">
+
+              <a href={{ issue.get_term_url }}>
+                <img id="issue" class="img-responsive" src={{ issue.get_relative_path }} id="preview-img" alt="First slide" >
+              </a>
+              <div id="season">
+                {{ issue.term }}
+              </div>
+              <div id="title">
+                {{ issue.title }}
+              </div>
+          </div>
+          {% endif %}
+
+      {% endfor %}
+        <div class="col-md-2">
+          </div>
+      </div>
+    </div>
+
+
+    {% for issues in issues_split_by_fours %}
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-2">
+          </div>
+
+        {% for issue in issues %}
+        <div class="col-md-2">
+            <a href={{ issue.get_term_url }}>
+              <img id="issue" class="clickable-img img-responsive" src={{ issue.get_relative_path }} id="preview-img" alt="First slide" >
+            </a>
+            <div id="season">
+              {{ issue.term }}
+            </div>
+            <div id="title">
+              {{ issue.title }}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="col-md-2">
+          </div>
+      </div>
+    </div>
+    {% endfor%}
+
+
+
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+<!-- issu -->
+<div id="issu" class="container-fluid">
+  <div class = "row text-center">
+    <div class="col-md-12 mx-auto">
+      <div class="mt-5" id="title">
+        {{ issue_focus.0 }}
+        <!-- <b>The Technology Issue</b> - <i>SP2018</i> -->
+      </div>
+      <iframe id="iframe" class="mt-5 mb-5" src={{ issue_focus.0.issu }} width="944" height="500" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

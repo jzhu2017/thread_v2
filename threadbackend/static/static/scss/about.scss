@@ -1,0 +1,243 @@
+@import 'base';
+
+#mission {
+  padding-left: 5%;
+  padding-bottom: 8%;
+  padding-top: 5%;
+
+  #title {
+    font-family: $title-font;
+    font-size: 225%;
+    padding-bottom: 70%;
+    padding-top: 10%;
+    color: $logo-color;
+  }
+
+  #capstext{
+    text-transform: uppercase;
+    //font-weight: bold;
+    font-size: 120%;
+  }
+}
+
+#teams {
+  // padding-left: 8%;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  float:none;
+
+  #title {
+    font-family: $logo-font;
+    font-size: 175%;
+    font-weight: bold;
+    padding-bottom: 4%;
+    color: #000;
+  }
+
+  .team-box {
+    width: 90% !important;
+  }
+  #hover {
+    display: none;
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    background-color: $logo-color;
+    color: white;
+    text-align: left;
+    #team-name {
+      font-weight: 900 !important;
+      margin-left: 8%;
+      padding-top: 8%;
+    }
+    #team-desc {
+      font-weight: 500 !important;
+      margin-left: 8%;
+      padding-right: 8%;
+      font-size: 16px;
+    }
+  }
+  .col-md-3:hover {
+    img {
+      display: none;
+    }
+    #hover {
+      display: block;
+    }
+  }
+  
+  #nocapstext{
+    //font-weight: bold;
+    font-size: 120%;
+  }
+}
+
+
+#about {
+  background-color: $issue-bg;
+  // box-shadow: inset 0 0 24px 0 $border-color;
+  padding-top: 8%;
+  padding-left: 15%;
+  padding-right: 15%;
+  // margin-top: 3%;
+  padding-bottom: 2%;
+  font-family: $title-font;
+
+  #title {
+    font-family: $logo-font;
+    font-size: 175%;
+    font-weight: bolder;
+    padding-bottom: 4%;
+    color: #000;
+  }
+
+  #thread {
+    font-weight: 900;
+  }
+
+  #cover-cont {
+    img {
+      float: right;
+      box-shadow: 0 4px 16px 0 $border-color;
+      //width: 250px;
+      height: auto;
+    }
+  }
+
+  #title-text {
+    color: $logo-color;
+    padding-top: 7%;
+    // padding-bottom: 7%;
+    font-weight: bold;
+  }
+
+  #whoweare {
+    font-size: 120%;
+  }
+
+  #our-values {
+
+    #passage {
+      color:#000;
+    }
+    #left-box, #right-box {
+      height: 50%;
+    }
+
+    #left-box {
+      #values {
+        height: 300px !important;
+      }
+
+
+    }
+
+    #passage-title {
+      font-weight: bold;
+    }
+  }
+}
+
+
+#eboard{
+  background-color: $issue-bg;
+  box-shadow: inset 0 0 24px 0 $border-color;
+  padding-top: 8%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 2%;
+  font-family: $title-font;
+
+  img {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  #title {
+    font-family: $logo-font;
+    font-size: 175%;
+    font-weight: bolder;
+    padding-bottom: 4%;
+    color: #000;
+  }
+
+  #membername {
+    margin-top: 10%;
+    font-size:100%;
+    font-weight: bold;
+
+  }
+
+  #titlename {
+    font-size:100%;
+  }
+
+}
+
+#toptitletext {
+  padding-bottom: 1%;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  button {
+    width:120px;
+  }
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+#videotext{
+  margin-left: auto;
+  margin-right: auto;
+
+  button{
+    font-size: 14px;
+  }
+}
+
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}

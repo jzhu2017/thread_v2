@@ -1,0 +1,293 @@
+{% extends "components/base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/articles.css' %}">
+{% endblock %}
+
+{% block title %}THREAD | Articles{% endblock %}
+
+
+{% block body %}
+
+<div id='shadow'>
+
+</div>
+
+<!-- Featured Article -->
+<div class="container-fluid" id="top">
+  <div class="row justify-content-center" style="position:relative;">
+    <div id="links" class="col-md-10" style="position:relative;">
+
+    {% if tag == "fashion" %}
+    <a href='?tag=fashion' class="active col-sm-2 text-center justify-content-center fashion">
+      FASHION
+    </a>
+
+    {% endif%}
+
+    {% if tag != "fashion" %}
+    <a href='?tag=fashion' class="col-sm-2 text-center justify-content-center fashion">
+      FASHION
+    </a>
+    {% endif %}
+
+    {% if tag == "art" %}
+    <a href='?tag=art' class="active col-sm-1 text-center justify-content-center art">
+      ART
+    </a>
+    {% endif %}
+
+    {% if tag != "art" %}
+    <a href='?tag=art' class="col-sm-1 text-center justify-content-center art">
+      ART
+    </a>
+    {% endif %}
+
+    {% if tag == "lifestyle" %}
+    <a href='?tag=lifestyle' class="active col-sm-2 text-center justify-content-center lifestyle">
+      LIFESTYLE
+    </a>
+    {% endif %}
+
+    {% if tag != "lifestyle" %}
+    <a href='?tag=lifestyle' class="col-sm-2 text-center justify-content-center lifestyle">
+      LIFESTYLE
+    </a>
+
+    {% endif %}
+
+    </div>
+
+    <div class="col-md-7" id="rectangles" style="position:absolute; left:50%; transform:rotate(180deg);">
+      <div class="mb-1" id="parallelogram1"></div>
+      <div class="mb-1" id="parallelogram2"></div>
+      <div class="mb-1" id="parallelogram3"></div>
+    </div>
+
+  </div>
+</div>
+
+  {% if first_few_articles.0 %}
+
+  <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel">
+    <div class="carousel-inner text-left" id="issues">
+      <div class="carousel-item active">
+          <div class="row">
+        	  <div class="col-sm-6">
+        	    <img src= {{ first_few_articles.0.get_relative_path }} id="preview-img" alt="First slide" >
+        	  </div>
+        	  <div class="col-sm-6">
+        	    <div id="title">
+                <a id="article-link" href={{ first_few_articles.0.get_article_link }}>
+        	         {{ first_few_articles.0.title }}
+                </a>
+        	    </div>
+        	    <div id="preview">
+                {{ first_few_articles.0.get_preview_text }}
+                <a href={{ first_few_articles.0.get_article_link }} id="cont">... CONTINUE</a>
+        	    </div>
+        	    <div id="box">
+
+        	    </div>
+        	    <div id="by">
+        	      by {{ first_few_articles.0.author }}
+        	    </div>
+        	  </div>
+    	     </div>
+      </div>
+
+      {% if first_few_articles.1 %}
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src={{ first_few_articles.1.get_relative_path }} id="preview-img" alt="First slide" >
+          </div>
+          <div class="col-sm-6">
+            <div id="title">
+              <a id="article-link" href={{ first_few_articles.1.get_article_link }}>
+              {{ first_few_articles.1.title }}
+              </a>
+            </div>
+            <div id="preview">
+              {{ first_few_articles.1.get_preview_text }} <a href={{ first_few_articles.1.get_article_link }} id="cont">... CONTINUE</a>
+            </div>
+            <div id="box">
+
+            </div>
+            <div id="by">
+              by {{ first_few_articles.1.author }}
+            </div>
+          </div>
+         </div>
+      </div>
+      {% endif %}
+
+      {% if first_few_articles.2 %}
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src={{ first_few_articles.2.get_relative_path }} id="preview-img" alt="First slide" >
+          </div>
+          <div class="col-sm-6">
+            <div id="title">
+              <a id="article-link" href={{ first_few_articles.2.get_article_link }}>
+              {{ first_few_articles.2.title }}
+              </a>
+            </div>
+            <div id="preview">
+              {{ first_few_articles.2.get_preview_text }} <a href={{ first_few_articles.2.get_article_link }} id="cont">... CONTINUE</a>
+            </div>
+            <div id="box">
+
+            </div>
+            <div id="by">
+              by {{ first_few_articles.2.author }}
+            </div>
+          </div>
+         </div>
+      </div>
+      {% endif %}
+
+    </div>
+
+    {% if first_few_articles.1 %}
+    <a id="prev" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="sr-only">Next</span>
+    </a>
+    {% endif %}
+
+  </div>
+
+  {% endif %}
+
+  {% if no_articles %}
+  <div class="carouselExampleIndicators">
+    <div class="carousel-inner text-center" id="issues" style="padding:10%;">
+      <div class="carousel-item active">
+        <div class="row">
+
+          <div class="col-sm-12" style="font-weight:400; font-size:130%;">
+            <div id="title">
+              No articles with this tag found...
+            </div>
+            <div id="preview">
+              Try another tag.
+            </div>
+            <div id="box">
+            </div>
+          </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+
+
+
+
+{% if rest_of_articles.0 %}
+
+
+<div class="container-fluid justify-content-center" id="boxes">
+
+  {% for 4_articles in rest_of_articles %}
+  <div class="row">
+
+      {% if 4_articles.0 %}
+        {% with 4_articles.0 as article %}
+          {% include "components/grid-box.html" %}
+        {% endwith %}
+      {% else %}
+        {% with article as nothing %}
+          {% include "components/grid-box-empty.html" %}
+        {% endwith %}
+      {% endif %}
+
+      {% if 4_articles.1 %}
+        {% with 4_articles.1 as article %}
+          {% include "components/grid-box.html" %}
+        {% endwith %}
+      {% else %}
+        {% with article as nothing %}
+          {% include "components/grid-box-empty.html" %}
+        {% endwith %}
+      {% endif %}
+
+      {% if 4_articles.2 %}
+        {% with 4_articles.2 as article %}
+          {% include "components/grid-box.html" %}
+        {% endwith %}
+      {% else %}
+        {% with article as nothing %}
+          {% include "components/grid-box-empty.html" %}
+        {% endwith %}
+      {% endif %}
+
+      {% if 4_articles.3 %}
+        {% with 4_articles.3 as article %}
+          {% include "components/grid-box.html" %}
+        {% endwith %}
+      {% else %}
+        {% with article as nothing %}
+          {% include "components/grid-box-empty.html" %}
+        {% endwith %}
+      {% endif %}
+
+
+
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endif %}
+
+<div class="container-fluid justify-content-center" id="past">
+  <div id='pastcontents'>
+    <h1>PAST ARTICLES</h1>
+
+
+    {% for two_articles in latest_6_articles %}
+    <div class="row" id="articles">
+    {% for article in two_articles %}
+
+
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-4">
+
+              <img src={{ article.get_relative_path }} id="preview-img" alt="First slide" >
+
+          </div>
+          <div class="col-sm-8">
+            <div id="title">
+                <a id="article-link" href={{ article.get_article_link }}> {{ article.title }} </a>
+            </div>
+            <div id="preview">
+              {{ article.get_preview_text }}
+            </div>
+            <div id="box">
+            </div>
+            <div id="by">
+              by {{ article.author }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    {% endfor %}
+
+
+
+
+
+    </div>
+  </div>
+  {% block scripts %}<script src="{% static 'js/index.js' %}"></script>{% endblock %}
+{% endblock %}

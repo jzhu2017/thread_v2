@@ -1,0 +1,241 @@
+{% extends "components/base.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block title %}THREAD | Home{% endblock %}
+
+
+{% block body %}
+
+{% if latest_issue %}
+<!-- Issue -->
+<div class="container-fluid" id="issue">
+
+  <div class="row align-items-center">
+    <!-- Cover Image -->
+    <div class="col mr-3" id="cover-cont">
+      <!-- Gradient & Image -->
+      <a href=issues/{{ latest_issue.get_term_url }}><img id="cover" src={{ latest_issue.image }} alt="Cover"></a>
+    </div>
+
+    <!-- Title Text -->
+    <div class="col" id="title-text">
+      <!-- Season -->
+      <div id="season">
+      	{{ latest_issue.term }}
+        <!-- FW2018 -->
+      </div>
+      <!-- Title -->
+      <div id="title">
+      	{{ latest_issue.title }}
+        <!-- The Technology Issue -->
+      </div>
+      <!-- View button -->
+      <a class="btn btn-outline-light pl-4 pr-4 hover" href="{% url 'issues' %}" role="button">VIEW</a>
+    </div>
+  </div>
+
+</div>
+
+{% endif %}
+
+<!-- Featured Article -->
+<div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  {% if three_latest_articles.2 %}
+  <div class="carousel-inner text-center" id="issues">
+
+    <div class="carousel-item active">
+        <div class="row">
+          {% if three_latest_articles.0 %}
+      	  <div class="col-md-6">
+      	    <img src={{ three_latest_articles.0.image }} id="preview-img" alt="First slide" >
+      	  </div>
+
+      	  <div class="col-md-6">
+      	    <div id="title">
+              <a id="article-link" href=articles/{{ three_latest_articles.0.get_article_link }}>
+                 {{ three_latest_articles.0.title }}
+              </a>
+
+      	    </div>
+
+      	    <div id="preview">
+              {{ three_latest_articles.0.get_preview_text }}
+      	       <a href=articles/{{ three_latest_articles.0.get_article_link }} id="cont">... CONTINUE</a>
+      	    <div id="box">
+
+      	    </div>
+      	    <div id="by">
+      	      by {{ three_latest_articles.0.author }}
+      	    </div>
+      	  </div>
+          </div>
+          {% endif %}
+  	     </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+      <div class="row">
+        {% if three_latest_articles.1 %}
+        <div class="col-md-6">
+          <img src={{ three_latest_articles.1.image }}  id="preview-img" alt="First slide" >
+        </div>
+
+        <div class="col-md-6">
+          <div id="title">
+            <a id="article-link" href=articles/{{ three_latest_articles.1.get_article_link }}>
+               {{ three_latest_articles.1.title }}
+            </a>
+          </div>
+
+          <div id="preview">
+            {{ three_latest_articles.1.get_preview_text }}
+             <a href=articles/{{ three_latest_articles.1.get_article_link }} id="cont">... CONTINUE</a>
+          </div>
+          <div id="box">
+
+          </div>
+          <div id="by">
+            by {{ three_latest_articles.1.author }}
+          </div>
+        </div>
+          {% endif %}
+       </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+      <div class="row">
+        {% if three_latest_articles.2 %}
+        <div class="col-sm-6">
+          <img src={{ three_latest_articles.2.image }}  id="preview-img" alt="First slide" >
+        </div>
+        <div class="col-sm-6">
+          <div id="title">
+            <a id="article-link" href=articles/{{ three_latest_articles.2.get_article_link }}>
+               {{ three_latest_articles.2.title }}
+            </a>
+          </div>
+
+          <div id="preview">
+            {{ three_latest_articles.2.get_preview_text }}
+             <a href=articles/{{ three_latest_articles.2.get_article_link }} id="cont">... CONTINUE</a>
+          </div>
+          <div id="box">
+
+          </div>
+          <div id="by">
+            by {{ three_latest_articles.2.author }}
+          </div>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+
+
+  {% endif %}
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+{% if articles.8 %}
+<div class="container-fluid justify-content-center" id="boxes">
+  <div class="row">
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.8.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.8.image }} alt="">
+        <h3 id="membername">{{ articles.8.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.8.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.7.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.7.image }} alt="">
+        <h3 id="membername">{{ articles.7.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.7.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.6.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.6.image }} alt="">
+        <h3 id="membername">{{ articles.6.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.6.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.5.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.5.image }} alt="">
+        <h3 id="membername">{{ articles.5.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.5.author }}</h4>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.4.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.4.image }} alt="">
+        <h3 id="membername">{{ articles.4.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.4.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.3.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.3.image }} alt="">
+        <h3 id="membername">{{ articles.3.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.3.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.2.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.2.image }} alt="">
+        <h3 id="membername">{{ articles.2.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.2.author }}</h4>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 mb-4">
+      <a id="article-link" href=articles/{{ articles.1.get_article_link }}>
+        <img class="img-fluid d-block" src={{ articles.1.image }} alt="">
+        <h3 id="membername">{{ articles.1.title }}</h3>
+      </a>
+      <h4 id="titlename">{{ articles.1.author }}</h4>
+    </div>
+
+  </div>
+
+</div>
+
+{% endif %}
+
+{% block scripts %}<script src="{% static 'js/index.js' %}"></script>{% endblock %}
+
+{% endblock %}

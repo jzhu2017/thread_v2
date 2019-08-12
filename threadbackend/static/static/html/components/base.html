@@ -1,0 +1,175 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en" >
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" >
+    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous" >
+    <link rel="icon" type="image/png" href="{% static 'imgs/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block style %}{% endblock%}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"  crossorigin="anonymous" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"  crossorigin="anonymous"></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light py-4">
+      <div class="container-fluid justify-content-center" id="logo">
+	  <svg width="22%"  height="3.13%"  viewBox="0 0 263 46"  version="1.1"  xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" >
+	    <a xlink:href="/">
+	    <g id="Artboard"  stroke="none"  stroke-width="1"  fill="none"  fill-rule="evenodd" >
+
+	      <g id="Thread-Logo"  fill="#000000" >
+		<rect x="0" y="0" width="100%" height="100%" fill-opacity="0"/>
+		<polygon id="Stroke-19"  points="10.5098 8.3214 0.2248 8.3214 0.2248 0.0844 30.4458 0.0844 30.4458 8.3214 20.1958 8.3214 20.1958 45.7754 10.5098 45.7754" ></polygon>
+		<polygon id="Stroke-21"  points="55.13 27.7164 55.13 45.7754 45.443 45.7754 45.443 0.0844 55.13 0.0844 55.13 18.2814 66.753 18.2814 66.753 0.0844 76.44 0.0844 76.44 45.7754 66.753 45.7754 66.753 27.7164" ></polygon>
+		<path d="M113.4161,11.1065 C113.4161,8.4515 111.5791,7.1235 107.9031,7.1235 L102.0741,7.1235 L102.0741,21.7275 L107.9031,21.7275 C109.4481,21.7275 110.7531,21.3395 111.8181,20.5625 C112.8831,19.7865 113.4161,18.8555 113.4161,17.7695 L113.4161,11.1065 Z M107.6401,0.0845 C113.0401,0.0845 117.6931,0.5195 120.2061,2.6395 C122.4371,4.4935 122.9481,8.4355 122.9021,11.6355 L122.8561,17.6195 C122.8561,20.8595 122.0031,24.9155 117.9591,26.6295 L124.8631,45.7745 L114.4161,45.7745 L108.5091,28.5165 C108.2281,28.5325 107.9351,28.5415 107.6301,28.5415 L102.0741,28.5415 L102.0741,45.7745 L92.3881,45.7745 L92.3881,0.0845 L107.6401,0.0845 Z"  id="Stroke-23" ></path>
+		<polygon id="Stroke-25"  points="140.3902 45.775 140.3902 0.085 167.9692 0.085 167.9692 8.846 150.0762 8.846 150.0762 18.731 163.1432 18.731 163.1432 27.267 150.0762 27.267 150.0762 37.152 167.9692 37.152 167.9692 45.775" ></polygon>
+		<path d="M198.8687,12.9429 L195.8617,28.0169 C195.8057,28.3019 196.0347,28.5659 196.3387,28.5659 L202.3517,28.5659 C202.6567,28.5659 202.8857,28.3019 202.8287,28.0169 L199.8217,12.9429 C199.7217,12.4419 198.9697,12.4419 198.8687,12.9429 Z M194.1907,35.6449 L191.9957,45.4099 C191.9477,45.6229 191.7507,45.7749 191.5217,45.7749 L182.4457,45.7749 C182.1357,45.7749 181.9047,45.5009 181.9727,45.2119 L191.9297,2.9629 C192.3257,1.2799 193.8927,0.0849 195.7017,0.0849 L203.0347,0.0849 C204.8107,0.0849 206.3487,1.2589 206.7377,2.9109 L216.6827,45.2129 C216.7517,45.5009 216.5207,45.7749 216.2107,45.7749 L207.0657,45.7749 C206.8367,45.7749 206.6387,45.6219 206.5917,45.4069 L204.4627,35.6479 C204.4157,35.4329 204.2177,35.2799 203.9877,35.2799 L194.6657,35.2799 C194.4367,35.2799 194.2387,35.4319 194.1907,35.6449 Z"  id="Stroke-27" ></path>
+		<path d="M241.8873,38.9615 L247.7163,38.9615 C249.2613,38.9615 250.5603,38.5655 251.6143,37.7725 C252.6673,36.9795 253.1943,36.0475 253.1943,34.9795 L253.1943,11.0815 C253.1943,9.9965 252.6553,9.0655 251.5783,8.2885 C250.5013,7.5115 249.2143,7.1235 247.7163,7.1235 L241.8873,7.1235 L241.8873,38.9615 Z M262.6333,34.8545 C262.6333,37.8595 262.0213,40.7705 259.0393,42.9075 C256.0573,45.0455 251.5963,45.7745 247.4173,45.7745 L232.2003,45.7745 L232.2003,0.0845 L247.4173,0.0845 C251.6443,0.0845 255.2373,1.1535 258.1963,3.2915 C261.1543,5.4285 262.6333,7.9925 262.6333,10.9815 L262.6333,34.8545 Z"  id="Stroke-29" ></path>
+	      </g>
+	    </g>
+	    </a>
+	  </svg>
+      </div>
+
+  <div class="container-fluid" id="links">
+	  <ul class="navbar-nav navbar-expand-sm nav-fill mx-auto">
+	    <li class="nav-item">
+	      <a class="nav-link" href="{% url 'issues' %}">ISSUES</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="{% url 'articles' %}">ARTICLES</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+	    </li>
+	  </ul>
+  </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+	<div class="row" id="row1">
+
+	  <!-- Thread Logo -->
+	  <div class="col" id="col1">
+	    <svg width="50%"  height="100%"  viewBox="0 0 263 46"  version="1.1"  xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" >
+	    <a xlink:href="/">
+	    <g id="Artboard"  stroke="none"  stroke-width="1"  fill="none"  fill-rule="evenodd" >
+
+	      <g id="Thread-Logo"  fill="#FFFFFF" >
+		<rect x="0" y="0" width="100%" height="100%" fill-opacity="0"/>
+		<polygon id="Stroke-19"  points="10.5098 8.3214 0.2248 8.3214 0.2248 0.0844 30.4458 0.0844 30.4458 8.3214 20.1958 8.3214 20.1958 45.7754 10.5098 45.7754" ></polygon>
+		<polygon id="Stroke-21"  points="55.13 27.7164 55.13 45.7754 45.443 45.7754 45.443 0.0844 55.13 0.0844 55.13 18.2814 66.753 18.2814 66.753 0.0844 76.44 0.0844 76.44 45.7754 66.753 45.7754 66.753 27.7164" ></polygon>
+		<path d="M113.4161,11.1065 C113.4161,8.4515 111.5791,7.1235 107.9031,7.1235 L102.0741,7.1235 L102.0741,21.7275 L107.9031,21.7275 C109.4481,21.7275 110.7531,21.3395 111.8181,20.5625 C112.8831,19.7865 113.4161,18.8555 113.4161,17.7695 L113.4161,11.1065 Z M107.6401,0.0845 C113.0401,0.0845 117.6931,0.5195 120.2061,2.6395 C122.4371,4.4935 122.9481,8.4355 122.9021,11.6355 L122.8561,17.6195 C122.8561,20.8595 122.0031,24.9155 117.9591,26.6295 L124.8631,45.7745 L114.4161,45.7745 L108.5091,28.5165 C108.2281,28.5325 107.9351,28.5415 107.6301,28.5415 L102.0741,28.5415 L102.0741,45.7745 L92.3881,45.7745 L92.3881,0.0845 L107.6401,0.0845 Z"  id="Stroke-23" ></path>
+		<polygon id="Stroke-25"  points="140.3902 45.775 140.3902 0.085 167.9692 0.085 167.9692 8.846 150.0762 8.846 150.0762 18.731 163.1432 18.731 163.1432 27.267 150.0762 27.267 150.0762 37.152 167.9692 37.152 167.9692 45.775" ></polygon>
+		<path d="M198.8687,12.9429 L195.8617,28.0169 C195.8057,28.3019 196.0347,28.5659 196.3387,28.5659 L202.3517,28.5659 C202.6567,28.5659 202.8857,28.3019 202.8287,28.0169 L199.8217,12.9429 C199.7217,12.4419 198.9697,12.4419 198.8687,12.9429 Z M194.1907,35.6449 L191.9957,45.4099 C191.9477,45.6229 191.7507,45.7749 191.5217,45.7749 L182.4457,45.7749 C182.1357,45.7749 181.9047,45.5009 181.9727,45.2119 L191.9297,2.9629 C192.3257,1.2799 193.8927,0.0849 195.7017,0.0849 L203.0347,0.0849 C204.8107,0.0849 206.3487,1.2589 206.7377,2.9109 L216.6827,45.2129 C216.7517,45.5009 216.5207,45.7749 216.2107,45.7749 L207.0657,45.7749 C206.8367,45.7749 206.6387,45.6219 206.5917,45.4069 L204.4627,35.6479 C204.4157,35.4329 204.2177,35.2799 203.9877,35.2799 L194.6657,35.2799 C194.4367,35.2799 194.2387,35.4319 194.1907,35.6449 Z"  id="Stroke-27" ></path>
+		<path d="M241.8873,38.9615 L247.7163,38.9615 C249.2613,38.9615 250.5603,38.5655 251.6143,37.7725 C252.6673,36.9795 253.1943,36.0475 253.1943,34.9795 L253.1943,11.0815 C253.1943,9.9965 252.6553,9.0655 251.5783,8.2885 C250.5013,7.5115 249.2143,7.1235 247.7163,7.1235 L241.8873,7.1235 L241.8873,38.9615 Z M262.6333,34.8545 C262.6333,37.8595 262.0213,40.7705 259.0393,42.9075 C256.0573,45.0455 251.5963,45.7745 247.4173,45.7745 L232.2003,45.7745 L232.2003,0.0845 L247.4173,0.0845 C251.6443,0.0845 255.2373,1.1535 258.1963,3.2915 C261.1543,5.4285 262.6333,7.9925 262.6333,10.9815 L262.6333,34.8545 Z"  id="Stroke-29" ></path>
+	      </g>
+	    </g>
+	    </a>
+	  </svg>
+	  </div>
+
+	  <!-- Sign up -->
+	  <div class="col" id="col2">
+	    <div class="row-fluid">
+	      <div class="form-group">
+		<label for="signUp">SIGN UP FOR THREAD UPDATES</label>
+		<div class="input-group">
+      {% if email %}
+        {% with email as email %}
+          {% include "components/email-submitted.html" %}
+        {% endwith %}
+      {% else %}
+        {% with email as email %}
+          {% include "components/email.html" %}
+        {% endwith %}
+      {% endif %}
+
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="row" id="row2">
+
+	  <!-- Description -->
+	  <div class="col" id="col1">
+	    An independent student publication.<br>
+	    Fashion, lifestyle, and art magazine at Cornell
+	  </div>
+
+	  <!-- Icons -->
+	  <div class="col" id="col2">
+	    <a href="https://www.instagram.com/threadmag/">
+	      <img src="{% static 'imgs/footer/ig_inactive.png' %}" id="ig" alt="ig">
+	    </a>
+	    <a href="https://www.facebook.com/TheThreadMagazine/">
+	      <img src="{% static 'imgs/footer/fb_inactive.png' %}" id="fb" alt="fb">
+	    </a>
+	    <a href="mailto:thethreadmagazine@gmail.com">
+	      <img src="{% static 'imgs/footer/email_inactive.png' %}" id="email" alt="em">
+	    </a>
+	  </div>
+	</div>
+      </div>
+    </footer>
+
+    <!-- Script for changing navbar on scroll -->
+    <script src="{% static 'js/base.js' %}"></script>
+
+    <script>
+
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    var el = document.getElementById("submit");
+    var input = document.getElementById("email");
+    if (el.addEventListener) {
+      el.addEventListener("click", function() {
+        console.log("click");
+        if ((input.value != undefined) && (validateEmail(input.value))) {
+          if (window.location.href.includes("?")) {
+            window.location.replace(window.location.href + "&email="+input.value);
+          } else {
+            window.location.replace(window.location.href + "?email="+input.value);
+          }
+        }
+
+
+      }, false);
+    } else { //IE8 support
+      el.attachEvent("onclick", function() {
+        if ((input.value != undefined) && (validateEmail(input.value))) {
+          if (window.location.href.includes("?")) {
+            window.location.replace(window.location.href + "&email="+input.value);
+          } else {
+            window.location.replace(window.location.href + "?email="+input.value);
+          }
+        }
+      });
+    }
+
+
+    </script>
+
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

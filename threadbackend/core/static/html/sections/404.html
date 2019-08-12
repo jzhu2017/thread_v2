@@ -1,0 +1,21 @@
+{% extends "components/base.html" %}
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block title %}THREAD | Home{% endblock %}
+
+
+{% block body %}
+
+<div class="error">
+    <div class="error__text">
+        Error 404 page not found
+    </div>
+</div>
+
+
+{% block scripts %}<script src="{% static 'js/index.js' %}"></script>{% endblock %}
+
+{% endblock %}

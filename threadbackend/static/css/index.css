@@ -1,0 +1,321 @@
+/* Font Variables */
+/* Colors */
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/Avenir.ttc"); }
+@media only screen and (max-device-width: 500px) {
+  nav {
+    display: none !important; }
+
+  .nav-up {
+    top: -60px; }
+
+  #nav-mobile {
+    background-color: white;
+    transition: all 0.5s ease;
+    display: block !important;
+    transition: top 0.2s ease-in-out;
+    padding-bottom: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16); }
+    #nav-mobile #mobile-logo {
+      transition: all 0.5s ease;
+      padding-top: 5%;
+      padding-left: 28%;
+      padding-bottom: 10px; }
+      #nav-mobile #mobile-logo #Thread-Logo {
+        fill: #DE99A2; }
+    #nav-mobile #links-mobile {
+      display: block; }
+      #nav-mobile #links-mobile ul {
+        padding-left: 0px !important;
+        padding-top: 0px !important;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0 !important; }
+        #nav-mobile #links-mobile ul .active {
+          color: #DE99A2;
+          border-bottom: 2px solid #DE99A2; }
+          #nav-mobile #links-mobile ul .active a {
+            color: #DE99A2; }
+      #nav-mobile #links-mobile .root {
+        border-bottom: 2px solid white; }
+      #nav-mobile #links-mobile a {
+        color: #9B9B9B;
+        text-decoration: none; }
+      #nav-mobile #links-mobile li {
+        display: inline-block;
+        padding-left: 25px;
+        padding-right: 25px; } }
+::-webkit-scrollbar {
+  display: none; }
+
+body {
+  font-family: Avenir, sans-serif;
+  overflow-x: hidden; }
+
+#nav-mobile {
+  display: none; }
+
+nav {
+  background-color: white;
+  top: 0;
+  transition: all 0.25s ease; }
+  nav svg {
+    padding-bottom: 1%;
+    fill: #DE99A2; }
+    nav svg #Thread-Logo {
+      fill: #DE99A2; }
+  nav ul {
+    margin-top: 8px;
+    width: 22%;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+    nav ul a {
+      font-family: Avenir;
+      font-weight: 500;
+      font-size: 85%;
+      color: rgba(0, 0, 0, 0.56); }
+
+nav.pastNav {
+  height: 7%;
+  background-color: #DE99A2; }
+  nav.pastNav #logo {
+    margin: 0;
+    width: 150px; }
+  nav.pastNav svg {
+    width: 100%; }
+  nav.pastNav #Thread-Logo {
+    fill: white; }
+  nav.pastNav #links {
+    width: 20%;
+    padding: 0;
+    margin: 0; }
+  nav.pastNav ul {
+    margin-top: 0;
+    border: none;
+    width: 100%; }
+    nav.pastNav ul a {
+      color: white !important; }
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 75%; }
+  footer #row1 {
+    padding-top: 8%;
+    padding-bottom: 0%;
+    width: 100%; }
+    footer #row1 .form-group {
+      margin-bottom: 0;
+      width: 80%; }
+    footer #row1 label {
+      margin-bottom: 1%; }
+    footer #row1 input {
+      line-height: .5em;
+      padding: 0;
+      padding-bottom: 1%;
+      background-color: black;
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid #979797; }
+    footer #row1 button {
+      background-color: black;
+      border: none;
+      width: 15%; }
+      footer #row1 button img {
+        width: 100%; }
+    footer #row1 #col1 {
+      padding-bottom: 1%; }
+    footer #row1 #Thread-Logo:hover {
+      fill: #DE99A2; }
+  footer #row2 {
+    width: 100%;
+    padding-bottom: 8%; }
+    footer #row2 #col2 {
+      width: 10%;
+      padding-top: 1%; }
+      footer #row2 #col2 img {
+        padding-right: 2%;
+        padding-top: 1%;
+        width: 35px; }
+      footer #row2 #col2 #ig:hover {
+        content: url("../imgs/footer/ig_active.png"); }
+      footer #row2 #col2 #fb:hover {
+        content: url("../imgs/footer/fb_active.png"); }
+      footer #row2 #col2 #email:hover {
+        content: url("../imgs/footer/email_active.png"); }
+  footer #col1 {
+    float: right;
+    text-align: right; }
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+@media only screen and (max-width: 670px) {
+  nav.pastNav {
+    height: 7%;
+    background-color: #DE99A2;
+    width: 100%;
+    display: block; }
+    nav.pastNav #logo {
+      margin: 0;
+      width: 100px;
+      margin-top: 2% !important;
+      float: left; }
+    nav.pastNav svg {
+      width: 100%; }
+    nav.pastNav #Thread-Logo {
+      fill: white; }
+    nav.pastNav #links {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      float: left; }
+    nav.pastNav ul {
+      border: none;
+      width: 100% !important;
+      list-style-type: none;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block; }
+      nav.pastNav ul a {
+        color: white !important; }
+      nav.pastNav ul li {
+        clear: both;
+        list-style: none;
+        width: 30px;
+        float: left; }
+
+  #carouselExampleIndicators {
+    display: none !important; }
+
+  #boxes {
+    margin-top: 10% !important; }
+    #boxes img {
+      text-align: center; } }
+.carousel-inner {
+  height: 500px; }
+
+#prev {
+  background-image: url("../imgs/l_arrow.png") !important;
+  background-repeat: no-repeat;
+  margin-left: 41%;
+  margin-top: 360px;
+  height: 50px; }
+
+#next {
+  background-image: url("../imgs/r_arrow.png") !important;
+  background-repeat: no-repeat;
+  margin-top: 360px;
+  margin-right: 30%;
+  height: 50px; }
+
+#issue {
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 24px 0 rgba(0, 0, 0, 0.08); }
+  #issue #cover-cont img {
+    float: right;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    width: 300px;
+    margin-top: 8%;
+    margin-bottom: 8%; }
+  #issue #title-text {
+    color: #DE99A2;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    font-weight: 900; }
+    #issue #title-text #season {
+      font-family: "Avenir", sans-serif;
+      font-size: 75%;
+      line-height: 1em; }
+    #issue #title-text #title {
+      font-family: "Avenir", sans-serif;
+      font-size: 200%;
+      padding-bottom: 4%; }
+    #issue #title-text a {
+      font-size: 125%;
+      font-weight: 900;
+      border: 4px solid #DE99A2;
+      border-radius: 8px;
+      color: #DE99A2; }
+
+#carouselExampleIndicators {
+  margin-top: 6%;
+  width: 70%;
+  display: block;
+  padding-bottom: 0; }
+  #carouselExampleIndicators img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-right: 75px;
+    margin-left: auto; }
+  #carouselExampleIndicators #title {
+    font-weight: 900;
+    font-size: 150%;
+    line-height: 1.5em;
+    text-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.08);
+    word-break: normal; }
+  #carouselExampleIndicators #preview {
+    padding-top: 3%;
+    color: grey;
+    font-weight: 300;
+    font-size: 90%;
+    word-break: normal; }
+    #carouselExampleIndicators #preview a {
+      color: #DE99A2; }
+  #carouselExampleIndicators #box {
+    position: absolute;
+    bottom: 30px;
+    height: 10px;
+    width: 18%;
+    background-color: #DE99A2; }
+  #carouselExampleIndicators #by {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    padding-top: 1%;
+    font-weight: 900;
+    font-size: 90%;
+    line-height: 1.5em;
+    text-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.08); }
+
+#boxes {
+  margin: auto;
+  width: 80%;
+  padding-left: 6%;
+  padding-bottom: 5%; }
+  #boxes img {
+    box-shadow: 8px 8px 0px #DE99A2;
+    object-fit: cover;
+    height: 175px;
+    width: 175px; }
+  #boxes h3 {
+    padding-top: 9%;
+    font-size: 24px; }
+  #boxes h4 {
+    font-size: 16px;
+    color: grey; }
+  #boxes .row {
+    padding-bottom: 16px; }
+
+.col-lg-3 {
+  transition: 1s all; }
+
+.col-lg-3:hover {
+  margin-top: -4% !important;
+  transition: 1s all;
+  margin-bottom: 6.5% !important; }
+  .col-lg-3:hover a {
+    text-decoration: none; }
+
+.hover:hover {
+  opacity: .6; }
+
+#article-link {
+  color: #111; }
+
+/*# sourceMappingURL=index.css.map */

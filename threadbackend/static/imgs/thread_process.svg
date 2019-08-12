@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="874px" height="190px" viewBox="0 0 874 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 21</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="263" cy="20" r="16"></circle>
+        <filter x="-21.9%" y="-15.6%" width="143.8%" height="143.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="aaliya" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABOUT:-Option-1" transform="translate(-335.000000, -648.000000)">
+            <g id="Group-21" transform="translate(327.000000, 645.000000)">
+                <path d="M99.5,88 L816,88" id="Line-2" stroke="#000000" stroke-linecap="square"></path>
+                <g id="Group-20">
+                    <g id="Group-19" transform="translate(0.000000, 68.000000)">
+                        <text id="CHOOSE-A-THEME" font-family="Avenir-Heavy, Avenir" font-size="16" font-weight="600" fill="#141011">
+                            <tspan x="7.568" y="80">CHOOSE A THEME</tspan>
+                        </text>
+                        <circle id="Oval-Copy" fill="#DE99A2" cx="80" cy="20" r="20"></circle>
+                        <circle id="Oval-Copy-6" fill="#FFFFFF" cx="80" cy="20" r="16"></circle>
+                        <g id="Oval-Copy-5">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                    <g id="Group-18" transform="translate(184.000000, 22.000000)">
+                        <text id="IDEATE-ON-THEME" font-family="Avenir-Heavy, Avenir" font-size="16" font-weight="600" fill="#141011">
+                            <tspan x="6.824" y="16">IDEATE ON THEME</tspan>
+                        </text>
+                        <g id="Group-22" transform="translate(60.000000, 46.000000)">
+                            <circle id="Oval" fill="#DE99A2" cx="20" cy="20" r="20"></circle>
+                            <path d="M4,21 L18.969258,21 L18.969258,4.03074198 C19.2999735,4.01034781 19.6334073,4 19.969258,4 C28.805814,4 35.969258,11.163444 35.969258,20 C35.969258,28.836556 28.805814,36 19.969258,36 C11.4685527,36 4.5161964,29.3707297 4,21 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(19.984629, 20.000000) scale(-1, 1) translate(-19.984629, -20.000000) "></path>
+                        </g>
+                    </g>
+                    <g id="Group-17" transform="translate(368.000000, 68.000000)">
+                        <text id="DEVELOP-EDIOTRIAL-&amp;" font-family="Avenir-Heavy, Avenir" font-size="16" font-weight="600" fill="#141011">
+                            <tspan x="43.112" y="80">DEVELOP </tspan>
+                            <tspan x="30.072" y="102">EDIOTRIAL &amp; </tspan>
+                            <tspan x="18.232" y="124">PHOTOSHOOTS</tspan>
+                        </text>
+                        <g id="Group-23" transform="translate(60.000000, 0.000000)">
+                            <circle id="Oval-Copy-2" fill="#DE99A2" cx="20" cy="20" r="20"></circle>
+                            <path d="M4,4 C12.836556,4 20,11.163444 20,20 C20,28.836556 12.836556,36 4,36 L4,4 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(12.000000, 20.000000) scale(-1, 1) translate(-12.000000, -20.000000) "></path>
+                        </g>
+                    </g>
+                    <g id="Group-15" transform="translate(736.000000, 68.000000)">
+                        <text id="PRINT-&amp;-LAUNCH" font-family="Avenir-Heavy, Avenir" font-size="16" font-weight="600" fill="#141011">
+                            <tspan x="12.744" y="80">PRINT &amp; LAUNCH</tspan>
+                        </text>
+                        <circle id="Oval-Copy-4" fill="#DE99A2" cx="80" cy="20" r="20"></circle>
+                    </g>
+                    <g id="Group-16" transform="translate(552.000000, 0.000000)">
+                        <text id="POST-PRODUCTION-AND" font-family="Avenir-Heavy, Avenir" font-size="16" font-weight="600" fill="#141011">
+                            <tspan x="4.008" y="16">POST-PRODUCTION </tspan>
+                            <tspan x="28.008" y="38">AND LAYOUT</tspan>
+                        </text>
+                        <g id="Group-24" transform="translate(60.000000, 68.000000)">
+                            <circle id="Oval-Copy-3" fill="#DE99A2" cx="20" cy="20" r="20"></circle>
+                            <path d="M4,4 C12.836556,4 20,11.163444 20,20 L4,20 L4,4 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
